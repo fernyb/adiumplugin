@@ -1,16 +1,16 @@
-h1. XCode Template for creating your own Adium Plugins
+h1 XCode Template for creating your own Adium Plugins
 
 
-h3. Installation
+h3 Installation
 
-1. Make sure you have the following directory: 
+* Make sure you have the following directory: 
   
   ~/cocoa 
 
 If you do not have that directory create it and navigate to it.
 
 
-2. Make sure to download the Adium source code into the ~/cocoa directory. You will need to use mercurial.
+* Make sure to download the Adium source code into the ~/cocoa directory. You will need to use mercurial.
 
   hg clone http://hg.adiumx.com/adium
 
