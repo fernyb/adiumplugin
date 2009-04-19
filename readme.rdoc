@@ -1,4 +1,4 @@
-h1 XCode Template for creating your own Adium Plugins
+<b> XCode Template for creating your own Adium Plugins </b>
 
 
 h3 Installation
