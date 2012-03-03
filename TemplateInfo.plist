@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.adiumPlugin</string>
+	<key>Concrete</key>
+	<true/>
+	<key>Description</key>
+	<string>This template creates a skeleton to write an adium plugin.</string>
+	<key>SortOrder</key>
+	<integer>5</integer>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.bundleBase</string>
+		<string>com.apple.dt.unit.macBase</string>
+	</array>
+
+  <key>Targets</key>
+  <array>
+    <dict>
+			<key>ProductType</key>
+			<string>com.apple.product-type.bundle</string>
+			<key>SharedSettings</key>
+			<dict>
+			  <key>WRAPPER_EXTENSION</key>
+				<string>AdiumPlugin</string>  
+			</dict>
+      <!-- 
+			Don't forget to include Adium
+			Xcode 4, the Framework path is 
+			/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks
+			Adium might need to be copied in this folder
+			-->
+      <key>Frameworks</key>
+			<array>
+				<string>Foundation</string>
+				<string>Adium</string>
+			</array>
+			
+      <key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>Sources</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Frameworks</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Resources</string>
+				</dict>
+			</array>	
+    </dict>
+    
+  </array>
+  
+	<key>Nodes</key>
+	<array>
+		<string>___PACKAGENAME___-Prefix.pch</string>
+		<string>___PACKAGENAME___-Info.plist:adiumPlugin</string>
+		<string>___PACKAGENAME___-Info.plist:NSHumanReadableCopyright</string>
+		<string>___PACKAGENAME___-Prefix.pch:objC:importFoundation</string>
+		<string>___PACKAGENAME___.h:objC:adiumPluginHeader</string>
+		<string>___PACKAGENAME___.m:objC:adiumPluginImplementation</string>
+	</array>
+	<key>Definitions</key>
+	<dict>
+	<key>*:objC:adiumPluginHeader</key>
+	<string>#import &lt;Foundation/Foundation.h&gt;
+#import &lt;Adium/AIPlugin.h&gt;
+#import &lt;Adium/AISharedAdium.h&gt;
+
+@interface ___PACKAGENAME___ : AIPlugin {
+
+}
+
+@end
+	</string>
+	
+	<key>*:objC:adiumPluginImplementation</key>
+	<string>#import &quot;___PACKAGENAME___.h&quot;
+
+@implementation ___PACKAGENAME___
+
+- (void)installPlugin
+{
+  // Do something for when plugin is installed
+  NSLog(@&quot;** Installed ___PACKAGENAME___ Plugin&quot;);
+}
+
+- (void)uninstallPlugin
+{
+  // Do something for when plugin is uninstalled
+  NSLog(@&quot;** Uninstalled ___PACKAGENAME___ Plugin&quot;);
+}
+
+@end
+	</string>
+	
+	<key>___PACKAGENAME___-Info.plist:adiumPlugin</key>
+	<string>&lt;key&gt;AIMinimumAdiumVersionRequirement&lt;/key&gt;
+	  &lt;string&gt;1.3&lt;/string&gt;
+	  &lt;key&gt;CFBundleDevelopmentRegion&lt;/key&gt;
+	  &lt;string&gt;English&lt;/string&gt;
+	  &lt;key&gt;CFBundleExecutable&lt;/key&gt;
+	  &lt;string&gt;${EXECUTABLE_NAME}&lt;/string&gt;
+	  &lt;key&gt;CFBundleIconFile&lt;/key&gt;
+	  &lt;string&gt;&lt;/string&gt;
+	  &lt;key&gt;CFBundleIdentifier&lt;/key&gt;
+	  &lt;string&gt;com.yourcompany.${PRODUCT_NAME:identifier}&lt;/string&gt;
+	  &lt;key&gt;CFBundleInfoDictionaryVersion&lt;/key&gt;
+	  &lt;string&gt;6.0&lt;/string&gt;
+	  &lt;key&gt;CFBundleName&lt;/key&gt;
+	  &lt;string&gt;${PRODUCT_NAME}&lt;/string&gt;
+	  &lt;key&gt;CFBundlePackageType&lt;/key&gt;
+	  &lt;string&gt;BNDL&lt;/string&gt;
+	  &lt;key&gt;CFBundleSignature&lt;/key&gt;
+	  &lt;string&gt;AdIM&lt;/string&gt;
+	  &lt;key&gt;CFBundleVersion&lt;/key&gt;
+	  &lt;string&gt;1.0&lt;/string&gt;
+	  &lt;key&gt;NSPrincipalClass&lt;/key&gt;
+	  &lt;string&gt;___PACKAGENAME___&lt;/string&gt;
+</string>
+	</dict>
+	<key>___PACKAGENAME___.h</key>
+	  <dict>
+		  <key>Path</key>
+		  <string>___PACKAGENAME___.h</string>
+		  <key>Group</key>
+	    <string>Classes</string>
+	  </dict>
+	<key>___PACKAGENAME___.m</key>
+	  <dict>
+		  <key>Path</key>
+		  <string>___PACKAGENAME___.m</string>
+		  <key>Group</key>
+	    <string>Classes</string>
+	  </dict>
+</dict>
+</plist>

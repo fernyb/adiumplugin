@@ -1,7 +1,8 @@
-<b> XCode Template for creating your own Adium Plugins </b>
+<b> XCode4 Template for creating your own Adium Plugins </b>
 
 
 <b>Installation</b>
+
 
 * Make sure you have the following directory: 
   
@@ -18,26 +19,27 @@ If you do not have that directory create it and navigate to it.
   
 * Make sure you have the following directory.
   
-  /Library/Application Support/Developer/Shared/Xcode/Project Templates/Adium/Plugin
+  /Developer/Library/Xcode/Templates/Project Templates/Mac/Application Plug-in
   
   
 If that does not exist make sure to create it.
 
+    mkdir -p /Developer/Library/Xcode/Templates/Project Templates/Mac/Application Plug-in
+
 
 * Download or clone the git repository 
 
-  git clone git://github.com/fernyb/adiumplugin.git
+    cd /Developer/Library/Xcode/Templates/Project Templates/Mac/Application Plug-in
+    
+    git clone git://github.com/fernyb/adiumplugin.git AdiumPlugin.xctemplate
   
-  
-Copy all files from git repository and place them in
 
-  /Library/Application Support/Developer/Shared/Xcode/Project Templates/Adium/Plugin
-  
-  
-* Launch XCode and create new project. On the left side under User Templates you should have a new entry for selecting Adium and selecting Plugin to create.
+* Open XCode 4 and create new project. 
+  Now click Application Plug-In. 
+  There you should see AdiumPlugin icon, click on it and click next. 
+  Now give it a name like DemoPlugin.
 
 
-
-* That is it. 
+* That's it.
 
 
